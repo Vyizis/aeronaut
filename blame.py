@@ -3,7 +3,6 @@
 from random import choice
 import sys
 if __name__ == '__main__':
-    print len(sys.argv)
     if len(sys.argv) >= 2:
         thing2blame = sys.argv[1:]
         newstr = ''.join(e for e in thing2blame if e.isalnum())
