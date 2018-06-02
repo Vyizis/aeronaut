@@ -4,8 +4,8 @@ from random import choice
 from sys import argv
 
 if __name__ == '__main__':
-    if len(argv) > 1:
-        thing2blame = ' '.join(argv[1:])
+    if len(sys.argv) > 1:
+        thing2blame = sys.argv[1:]
         print "DAMMIT, {0}!".format(thing2blame)
     else:
         people2blame = ['nobody\'s fault, shit happens', 'vyizis', 'cptprime', 'cahbtexhuk', 'M0XIN', 'tgreer', 'the Computer. Do you secretly hate the Computer, citizen?']
