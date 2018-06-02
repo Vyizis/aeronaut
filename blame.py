@@ -3,10 +3,10 @@
 from random import choice
 import sys
 if __name__ == '__main__':
-    if len(sys.argv[1:]) >= 0:
-        thing2blame = sys.argv[1:]
-        newstr = ''.join(e for e in thing2blame if e.isalnum())
-        print "DAMMIT, {0}!".format(newstr)
+    arg = sys.argv[1:]
+    thing2blame = ''.join(e for e in arg if e.isalnum())
+    if len(thing2blame) > 0:
+        print "DAMMIT, {0}!".format(thing2blame)
     else:
         people2blame = ['nobody\'s fault, shit happens', 'vyizis', 'cptprime', 'cahbtexhuk', 'M0XIN', 'tgreer', 'the Computer. Do you secretly hate the Computer, citizen?']
 	person = choice(people2blame)
