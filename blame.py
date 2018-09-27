@@ -9,5 +9,6 @@ if __name__ == '__main__':
         print "DAMMIT, {0}!".format(thing2blame)
     else:
         people2blame = ['nobody\'s fault, shit happens', 'vyizis', 'cptprime', 'cahbtexhuk', 'M0XIN', 'tgreer', 'the Computer. Do you secretly hate the Computer, citizen?']
-	person = choice(people2blame)
+#	person = choice(people2blame)
+        person = 'tgreer'
         print "It was {0}".format(person)
