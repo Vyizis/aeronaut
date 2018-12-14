@@ -14,7 +14,7 @@ if len(loc) > 0:
         url = "https://api.forecast.io/forecast/d893c4af044563aed2283d7dc40e2d63/" + coords + "?units=uk"
         response = requests.get(url)
     else:
-        print "No location!" , location
+        print ("No location!" , location)
         raise SystemExit       
 else:    
     response = requests.get('https://api.forecast.io/forecast/d893c4af044563aed2283d7dc40e2d63/51.531801,-0.060318?units=uk')
