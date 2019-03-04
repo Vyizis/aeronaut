@@ -1,4 +1,4 @@
 #!/bin/sh
 git pull
-chmod +x *.sh
-chmod +x *.py
+chmod +x scripts/*.sh
+chmod +x scripts/*.py
