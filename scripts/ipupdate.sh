@@ -1,2 +1,2 @@
 #!/bin/sh
-curl https://sync.afraid.org/u/CyTXMbtq5cPnLjEg5vKHTPDE/
+curl https://freedns.afraid.org/dynamic/update.php?Wlg2MTNONGdaRzJjbkM2aXpha0ZiZlhZOjE3NTIzMDI5
