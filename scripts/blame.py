@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
 from random import choice
-import sys
+import os
 if __name__ == '__main__':
-    arg = sys.argv[1:]
+    arg = os.environ.get('IRCCAT_ARGS')
     thing2blame = ''.join(e for e in arg if e.isalnum())
     if len(thing2blame) > 0:
         print "DAMMIT, {0}!".format(thing2blame)
