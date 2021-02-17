@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import random, sys
+from random import choice 
 
 choices = [
 'As I see it, yes',
@@ -24,4 +24,4 @@ choices = [
 'Very doubtful',
 ]
 
-print random.choice(choices)
+print (random.choice(choices))
