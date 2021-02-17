@@ -7,8 +7,8 @@ from geopy.geocoders import GoogleV3
 arg = os.environ.get('IRCCAT_ARGS')
 loc = ''.join(e for e in arg if e.isalnum())
 if len(loc) > 0:
-    geolocator = GoogleV3(api_key='AIzaSyCnCsDEYUB1z5WMTqjuU5W4LxZT8kIA9mk')
-    location = geolocator.geocode(loc, language='en')
+    geolocator = Nominatim(user_agent=”myGeocoder”)
+    location = geolocator.geocode(loc)
     if location != None:
         coords = str(location.latitude) + "," + str(location.longitude)
         url = "https://api.forecast.io/forecast/d893c4af044563aed2283d7dc40e2d63/" + coords + "?units=uk"
@@ -21,7 +21,6 @@ else:
 
 data = json.loads(response.content)
  
-
 current_summary = data['currently']['summary']
 temp_c = data['currently']['temperature']
 temp_f = (temp_c * 9.0 / 5) + 32
