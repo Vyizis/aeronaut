@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import requests
 import json
-import sys
+import os
 from geopy.geocoders import GoogleV3
 
 arg = os.environ.get('IRCCAT_ARGS')
