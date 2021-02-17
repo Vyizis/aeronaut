@@ -1,4 +1,4 @@
 #!/bin/sh
 git pull
-chmod +x *.py
-chmod +x *.sh
+chmod +x *.py && echo "python"
+chmod +x *.sh && echo "shell"
