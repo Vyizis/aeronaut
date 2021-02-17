@@ -7,7 +7,7 @@ from geopy.geocoders import GoogleV3
 arg = os.environ.get('IRCCAT_ARGS')
 loc = ''.join(e for e in arg if e.isalnum())
 if len(loc) > 0:
-    geolocator = GoogleV3(api_key='keygoeshere')
+    geolocator = GoogleV3(api_key='AIzaSyCnCsDEYUB1z5WMTqjuU5W4LxZT8kIA9mk')
     location = geolocator.geocode(loc, language='en')
     if location != None:
         coords = str(location.latitude) + "," + str(location.longitude)
