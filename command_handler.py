@@ -35,7 +35,7 @@ if re.match('^[a-z0-9]+$', command):
 
             while True:
                 # We do this to avoid buffering from the subprocess stdout
-                print(os.read(stdout.fileno(), 65536))
+                print((os.read(stdout.fileno(), 65536)))
                 sys.stdout.flush()
 
                 if proc.poll() is not None:
