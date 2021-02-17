@@ -2,10 +2,10 @@
 import requests
 import json
 import os
+import re
 from geopy.geocoders import Nominatim
 
-arg = os.environ.get('IRCCAT_ARGS')
-loc = ''.join(e for e in arg if e.isalnum())
+loc = re.sub(r'\W+', ' ', os.environ.get('IRCCAT_ARGS'))
 if len(loc) > 0:
     geolocator = Nominatim(user_agent="London-Aerospace")
     location = geolocator.geocode(loc)
