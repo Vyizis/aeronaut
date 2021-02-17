@@ -24,4 +24,4 @@ choices = [
 'Very doubtful',
 ]
 
-print (random.choice(choices))
+print (choice(choices))
