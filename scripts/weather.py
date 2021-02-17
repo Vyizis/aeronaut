@@ -7,7 +7,7 @@ from geopy.geocoders import Nominatim
 arg = os.environ.get('IRCCAT_ARGS')
 loc = ''.join(e for e in arg if e.isalnum())
 if len(loc) > 0:
-    geolocator = Nominatim(user_agent=”London-Aerospace”)
+    geolocator = Nominatim(user_agent="London-Aerospace")
     location = geolocator.geocode(loc)
     if location != None:
         coords = str(location.latitude) + "," + str(location.longitude)
