@@ -1,3 +1,4 @@
+#!/usr/bin/env 
 import requests
 import json
 
