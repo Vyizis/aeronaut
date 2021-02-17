@@ -15,13 +15,13 @@ path = './scripts/'
 
 # Example of retrieving all the environment variables.
 # We only need command here as all the others will be available in the script's environment.
-nick = os.environ.get('IRCCAT_NICK')
-user = os.environ.get('IRCCAT_USER')
-host = os.environ.get('IRCCAT_HOST')
-channel = os.environ.get('IRCCAT_CHANNEL')
-respond_to = os.environ.get('IRCCAT_RESPOND_TO')
+#nick = os.environ.get('IRCCAT_NICK')
+#user = os.environ.get('IRCCAT_USER')
+#host = os.environ.get('IRCCAT_HOST')
+#channel = os.environ.get('IRCCAT_CHANNEL')
+#respond_to = os.environ.get('IRCCAT_RESPOND_TO')
 command = os.environ.get('IRCCAT_COMMAND')
-args = os.environ.get('IRCCAT_ARGS')
+#args = os.environ.get('IRCCAT_ARGS')
 
 found = False
 if re.match('^[a-z0-9]+$', command):
@@ -35,7 +35,7 @@ if re.match('^[a-z0-9]+$', command):
 
             while True:
                 # We do this to avoid buffering from the subprocess stdout
-                print((os.read(stdout.fileno(), 65536)))
+                print(os.read(stdout.fileno(), 65536))
                 sys.stdout.flush()
 
                 if proc.poll() is not None:
