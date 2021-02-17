@@ -17,9 +17,14 @@ date_formatted=date_time_obj.strftime("%A the %d")
 hour_formatted=date_time_obj.strftime("%H %M %p")
 
 
+
+n=date_time_obj.strftime("%d")
+suffix = { 1: "st", 2: "nd", 3: "rd" }.get(n if (int(n) < 20) else (int(n) % 10), 'th')
+
+
 if "hour" in date_precision:
 	msg= f"The next launch is {mission_name} on {date_formatted} at {hour_formatted}"
 else:
-	msg= f"The next launch is {mission_name} on {date_formatted}"
+	msg= f"The next launch is {mission_name} on {date_formatted}{suffix}"
 
 print(msg)
