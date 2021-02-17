@@ -2,7 +2,7 @@
 import requests
 import json
 import os
-from geopy.geocoders import GoogleV3
+from geopy.geocoders import Nominatim
 
 arg = os.environ.get('IRCCAT_ARGS')
 loc = ''.join(e for e in arg if e.isalnum())
