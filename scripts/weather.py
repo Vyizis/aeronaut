@@ -23,9 +23,7 @@ data = json.loads(response.content)
  
 current_summary = data['currently']['summary']
 temp_c = data['currently']['temperature']
-temp_f = (temp_c * 9.0 / 5) + 32
 app_temp_c = data['currently']['apparentTemperature']
-app_temp_f = (app_temp_c * 9.0 / 5) + 32
 humidity = data['currently']['humidity']
 wind_bearing = data['currently']['windBearing']
 wind_compass = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW', 'N'][int(wind_bearing / 45.0 + 0.5)]
@@ -39,7 +37,7 @@ if app_temp_c != temp_c:
         app_temp_c,
     )
             
-msg = u'Currently %.1f\u00b0C%s, humidity %s%%, wind: %s at %.0fmph. %s %s' % (
+msg = 'Currently %.1f\u00b0C%s, humidity %s%%, wind: %s at %.0fmph. %s %s' % (
     temp_c,     
     feels_like, 
     int(humidity * 100),
@@ -48,4 +46,4 @@ msg = u'Currently %.1f\u00b0C%s, humidity %s%%, wind: %s at %.0fmph. %s %s' % (
     minute_summary,
     day_summary,
 )
-print (msg.encode('utf-8'))
+print (msg)
