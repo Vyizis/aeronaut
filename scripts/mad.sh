@@ -1,2 +1,2 @@
-#!/bin/sh
-echo https://youtu.be/xzpndHtdl9A
+#!/bin/bash
+echo "https://youtu.be/xzpndHtdl9A/"
