@@ -1,15 +1,8 @@
 #!/usr/bin/python
 
-import random
-import sys
+from random import choice 
 
-'''
-##########
-Hackspace excuses
-##########
-'''
-
-reasons = [
+choices = [
     "Work got in the way",
     "I wasn't expecting it to arrive yet",
     "I forgot about it",
@@ -41,14 +34,4 @@ reasons = [
     "It's actually about ethics in games journalism",
 ]
 
-if len(sys.argv) > 5:
-    term = " ".join(sys.argv[5:])
-
-    for reason in reasons:
-        if term.lower() in reason.lower():
-            msg = "BINGO! {0}!".format(reason)
-            print msg
-            break
-else:
-    reason = random.choice(reasons)
-    print reason
+print (choice(choices))

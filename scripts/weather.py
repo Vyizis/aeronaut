@@ -4,7 +4,7 @@ import json
 import sys
 from geopy.geocoders import GoogleV3
 
-arg = sys.argv[1:]
+arg = os.environ.get('IRCCAT_ARGS')
 loc = ''.join(e for e in arg if e.isalnum())
 if len(loc) > 0:
     geolocator = GoogleV3(api_key='keygoeshere')
@@ -49,4 +49,4 @@ msg = u'Currently %.1f\u00b0C%s, humidity %s%%, wind: %s at %.0fmph. %s %s' % (
     minute_summary,
     day_summary,
 )
-print msg.encode('utf-8')
+print (msg.encode('utf-8'))
