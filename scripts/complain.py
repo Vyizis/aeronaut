@@ -95,4 +95,4 @@ if thing:
     if complaint.startswith('%s'):
       thing = thing[0].upper() + thing[1:]
 
-  print p.inflect(complaint % thing)
+  print (p.inflect(complaint % thing))
