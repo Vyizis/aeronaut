@@ -81,7 +81,7 @@ if thing:
       if not spurious_singular(p.singular_noun(thing)):
         # NB breaks "doing this and that", and "the answer to the ultimate question of life, the universe, and everything"
         p.num(3)
-  except Exception, e:
+  except Exception as e:
     try:
       singulars = [p.singular_noun(w) for w in thing.split(' ')]
       singulars = [s for s in singulars if not spurious_singular(s)]
