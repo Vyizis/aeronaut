@@ -27,7 +27,7 @@ found = False
 if re.match('^[a-z0-9]+$', command):
     for filename in os.listdir(path):
 
-        if re.match('^%s\.[a-z]+$' % command, filename):
+        if re.match(r'^%s\.[a-z]+$' % command, filename):
             found = True
 
             proc = subprocess.Popen(os.path.join(path, filename), stdout=subprocess.PIPE)
